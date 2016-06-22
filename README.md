@@ -6,7 +6,14 @@
 
 ## Feature
 
-- Build with Webpack
+- [x]Webpack
+- [x]Google ES5
+- [x]AirBnb ES6
+- [x]Babel
+- [x]ESLint
+- [x]sass-Lint
+- [x]csscomb
+- [x]webpack-dev-server
 
 ## How to use
 
