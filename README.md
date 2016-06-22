@@ -2,15 +2,15 @@
 
 A webpack boilerplate in order to quickly build up a production-ready marketing website.  
 
-# Example page
+## Example page
 
-# Feature
+## Feature
 
 - Build with Webpack
 - 
 
-# How to use
+## How to use
 
-# License
+## License
 
 MIT
