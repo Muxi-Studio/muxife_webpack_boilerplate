@@ -4,7 +4,7 @@
 
 ## Example page
 
-## Feature
+## Stack
 
 - [x] Webpack
 - [x] Google ES5
