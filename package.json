@@ -1,0 +1,41 @@
+{
+  "name": "muxife_webpack_boilerplate",
+  "version": "1.0.0",
+  "description": "> A webpack boilerplate in order to quickly build up a web app for muxife.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --config webpack.config.js --inline",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muxi-Studio/muxife_webpack_boilerplate.git"
+  },
+  "author": "muxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muxi-Studio/muxife_webpack_boilerplate/issues"
+  },
+  "homepage": "https://github.com/Muxi-Studio/muxife_webpack_boilerplate",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "node-sass": "^3.8.0",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.2.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
