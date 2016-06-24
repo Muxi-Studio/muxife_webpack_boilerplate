@@ -23,12 +23,15 @@
 ### Development
 Two ways to build and run your web app:
 
-- For dev server
-    $ npm run dev 
-    Then point your browser to http://localhost:8080/
+- For dev server  
 
-- For production
-    $ npm run deploy
+`$ npm run dev`   
+`Then point your browser to http://localhost:8080/`
+
+
+- For production 
+
+`$ npm run deploy`
 
 ## FAQ
 
