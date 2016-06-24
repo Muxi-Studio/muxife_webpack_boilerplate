@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --config webpack.config.js --inline",
+    "dev": "webpack-dev-server --devtool eval --progress --hot --inline",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
   "repository": {
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Muxi-Studio/muxife_webpack_boilerplate",
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.0",
@@ -30,8 +29,9 @@
     "css-loader": "^0.23.1",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.8.0",
-    "react-hot-loader": "^1.3.0",
+    "open-browser-webpack-plugin": "^0.0.2",
     "sass-loader": "^3.2.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

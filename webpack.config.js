@@ -1,16 +1,25 @@
-var webpack = require('webpack');
-var path = require('path');
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
+	devServer: {
+	    historyApiFallback: true,
+	    hot: true,
+	    inline: true,
+	    progress: true,
+	    contentBase: './src',
+	    port: 8080
+	},
 	entry: [    
 		'webpack/hot/dev-server',
     	'webpack-dev-server/client?http://localhost:8080',
-    	path.resolve(__dirname,'./src/js/app.js')
+    	path.resolve(__dirname,'./src/index.js')
     ],
 	output: {
-	    path: __dirname + '/build',
-    	publicPath: '/',
+	    path: path.join(__dirname, './build'),
+    	publicPath: 'http://localhost:8080/',
     	filename: 'bundle.js'
     },
     module: {
@@ -21,21 +30,23 @@ module.exports = {
 				exclude: /node_modules/
 			},
 			{
-				test: /\.scss$/,
-				loaders: ['style', 'css', 'sass','autoprefixer-loader']
-			},
+	            test: /\.scss$/,
+	            exclude: /node_modules/,
+	            loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+	        },
 			{
 		        test: /\.(jpe?g|png|gif|svg)$/,
         		loader: 'url?limit=8024&name=images/[name].[ext]'
-			},
-			{
-		        test: /\.html$/,
-       			 loader: 'url?name=[name].[ext]'
 			}
 		],
 	},
+	resolve: {
+    	  extensions: ['', '.js', '.scss'],
+  	},
 	plugins: [
-    	new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+		new webpack.HotModuleReplacementPlugin(),
+    	new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+    	new ExtractTextPlugin('bundle.css')
  	]
 
 };
