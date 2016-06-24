@@ -2,7 +2,7 @@
 
 [![TeamCity CodeBetter](https://img.shields.io/teamcity/codebetter/bt428.svg?maxAge=2592000)]() 
 [![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]() 
-[![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]() 
+[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)]()
 
 > A webpack boilerplate in order to quickly build up a web app for muxife.  
 
