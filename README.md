@@ -49,7 +49,7 @@ Two ways to build and run your web app:
 
 - Minifies all JS and CSS
 - Inline base64 URLs for images and fonts if their size is less than specified limit
-- Sets NODE_ENV to production so that React is built in production mode
+- Sets NODE_ENV to production 
 - Places the resulting built project files into /build directory
 
 ## License
