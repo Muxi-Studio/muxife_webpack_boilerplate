@@ -35,7 +35,7 @@ Two ways to build and run your web app:
 
 - For production 
 
-`$ npm run deploy`
+`$ npm run build`
 
 ## FAQ
 
@@ -45,7 +45,7 @@ Two ways to build and run your web app:
 - The extract-text-webpack-plugin extracts the compiled Sass into bundle.css
 - It compiles app.js into bundle.js
 
-#### When you deploy this:
+#### When you build this:
 
 - Minifies all JS and CSS
 - Inline base64 URLs for images and fonts if their size is less than specified limit
