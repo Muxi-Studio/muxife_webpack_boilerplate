@@ -9,7 +9,6 @@ module.exports = {
 	    hot: true,
 	    inline: true,
 	    progress: true,
-	    contentBase: './src',
 	    port: 8080
 	},
 	entry: [    
@@ -19,7 +18,7 @@ module.exports = {
     ],
 	output: {
 	    path: path.join(__dirname, './build'),
-    	publicPath: 'http://localhost:8080/',
+    	publicPath: 'http://localhost:8080/build/',
     	filename: 'bundle.js'
     },
     module: {
