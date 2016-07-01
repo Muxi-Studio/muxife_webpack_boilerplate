@@ -40,7 +40,7 @@ module.exports = {
 		],
 	},
 	resolve: {
-    	  extensions: ['', '.js', '.scss'],
+    	extensions: ['', '.js', '.scss'],
   	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
