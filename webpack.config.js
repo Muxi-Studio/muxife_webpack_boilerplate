@@ -2,11 +2,16 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var Dashboard = require('webpack-dashboard');
+var DashboardPlugin = require('webpack-dashboard/plugin');
+var dashboard = new Dashboard();
+
 
 module.exports = {
 	devServer: {
 	    historyApiFallback: true,
 	    hot: true,
+	    quiet: true,
 	    inline: true,
 	    progress: true,
 	    port: 8080
@@ -45,7 +50,8 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
     	new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
-    	new ExtractTextPlugin('bundle.css')
+    	new ExtractTextPlugin('bundle.css'),
+    	new DashboardPlugin(dashboard.setData)
  	]
 
 };
